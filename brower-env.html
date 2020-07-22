@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="btn">hhhhhhh</div>
+    <script>
+        // window.onload = function () {
+        // let btn = document.getElementById('btn')
+        function b() {
+            console.log('b');
+        }
+
+        function a() {
+            console.log('a');
+            document.getElementById('btn').removeEventListener('click', b())
+        }
+
+        function c() {
+            console.log('c');
+        }
+
+        document.getElementById('btn').addEventListener('click', a)
+        document.getElementById('btn').addEventListener('click', b)
+        document.getElementById('btn').addEventListener('click', c)
+
+        // }
+    </script>
+</body>
+
+
+</html>
